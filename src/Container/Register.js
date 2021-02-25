@@ -1,6 +1,8 @@
-import { event } from "jquery";
+
+
 import { Component } from "react";
-import Container from "./Container";
+
+import axios from 'axios';
 
 class register extends Component{
     state ={
@@ -10,10 +12,24 @@ class register extends Component{
         Username : " ",
         Password : " "
     }
+    sendUserData=()=>{
+        const data ={
+            FullName : this.state.FullName,
+            Address : this.state.Address,
+            PhoneNo :this.state.PhoneNo,
+            Username :this.state.Username,
+            Password :this.state.Password
+        }
+        axios.post("http://localhost:90/register_insert", data)
+        .then()
+        .catch(err=>{
+            console.log(err)
+        })
+    }
     render(){
         return(
             
-<form>
+<div>
     <p>FullName : <input type="text" value={this.state.FullName} 
     onChange={(event)=>{this.setState({FullName : event.target.value})}}/></p>
     <p>Address : <input type="text" value={this.state.Address} 
@@ -24,8 +40,8 @@ class register extends Component{
      onChange={(event)=>{this.setState({Username : event.target.value})}}/></p>
     <p>Password : <input type="text" value={this.state.Password} 
     onChange={(event)=>{this.setState({Password : event.target.value})}}/></p>
-    <p><input type="submit"/>  </p>
-</form>
+    <p><input type="submit" onClick={this.sendUserData}/>  </p>
+</div>
         )
     }
 }
