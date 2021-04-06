@@ -4,6 +4,7 @@ import axios from 'axios';
 
 class register extends Component{
     state ={
+        Uimage: "",
         FullName : " ",
         Address : " ",
         PhoneNo : " ",
@@ -11,19 +12,33 @@ class register extends Component{
         Password : " "
     }
     sendUserData=()=>{
-        const data ={
+        const data1 ={
             FullName : this.state.FullName,
             Address : this.state.Address,
             PhoneNo :this.state.PhoneNo,
             Username :this.state.Username,
             Password :this.state.Password
         }
+        const data= new FormData() 
+
+        data.append ('Uimage', this.state.Uimage)
+        data.append ('FullName', this.state.FullName)
+        data.append ('Address', this.state.Address)
+        data.append ('PhoneNo', this.state.PhoneNo)
+        data.append ('Username', this.state.Username)
+        data.append ('Password', this.state.Password)
+        
         axios.post("http://localhost:90/register/insert", data)
         .then()
         .catch(err=>{
             console.log(err)
         })
     }
+    imageHandler=(e)=>{
+        this.setState({
+            Uimage:e.target.files[0]
+        })
+    };
     render(){
         return(
             <div class="registration-form">
@@ -51,6 +66,10 @@ class register extends Component{
                 <div class="form-group">
                 <p>Password:<input type="text" value={this.state.Password} 
     onChange={(event)=>{this.setState({Password:event.target.value})}}/></p>
+                </div>
+                <div class="form-group">
+                <p>Upload Profile:<input type="file" placeholder="Upload Profile" name="Uimage" 
+     onChange={this.imageHandler}/></p>
                 </div>
                 <div class="form-group">
                 <p><input type="submit" onClick={this.sendUserData}/>  </p>
