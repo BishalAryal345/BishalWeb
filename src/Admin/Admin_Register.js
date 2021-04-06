@@ -1,24 +1,20 @@
 import { Component } from "react";
-import './Register.css';
+import '../Container/Register.css';
 import axios from 'axios';
 
-class register extends Component{
+class Adminregister extends Component{
     state ={
         FullName : " ",
-        Address : " ",
-        PhoneNo : " ",
         Username : " ",
         Password : " "
     }
     sendUserData=()=>{
         const data ={
             FullName : this.state.FullName,
-            Address : this.state.Address,
-            PhoneNo :this.state.PhoneNo,
             Username :this.state.Username,
             Password :this.state.Password
         }
-        axios.post("http://localhost:90/register/insert", data)
+        axios.post("http://localhost:90/admin/insert", data)
         .then()
         .catch(err=>{
             console.log(err)
@@ -34,15 +30,6 @@ class register extends Component{
                 <div class="form-group">
                 <p>FullName:<input type="text" value={this.state.FullName} 
     onChange={(event)=>{this.setState({FullName:event.target.value})}}/></p>
-                </div>
-
-                <div class="form-group">
-                    <p>Address:<input type="text" value={this.state.Address} 
-    onChange={(event)=>{this.setState({Address:event.target.value})}}/></p>
-                </div>
-                <div class="form-group">    
-                <p>PhoneNo:<input type="text" value={this.state.PhoneNo} 
-    onChange={(event)=>{this.setState({PhoneNo:event.target.value})}}/></p>
                 </div>
                 <div class="form-group">
                 <p>Username:<input type="text" value={this.state.Username}
@@ -70,4 +57,4 @@ class register extends Component{
         )
     }
 }
-export default register
+export default Adminregister

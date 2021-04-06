@@ -1,10 +1,8 @@
 import { Component } from "react";
 import axios from 'axios';
 import {Link} from 'react-router-dom';
-import './login.css';
-
-
-class Login extends Component{
+import '../Container/login.css';
+class Adminlogin extends Component{
     state={
         Username : "",
         Password : ""
@@ -15,16 +13,16 @@ class Login extends Component{
         //     Username :this.state.Username,
         //     Password :this.state.Password
         // }
-        axios.post("http://localhost:90/user/login", this.state)
+        axios.post("http://localhost:90/admin/login", this.state)
         .then((response)=>{
             console.log(response);
-            localStorage.setItem('token' , response.data.token)
-            localStorage.setItem('userType', 'artist')
-           window.location.href="/artist";
             this.setState({
                 loginChk: true
             })
-            
+            localStorage.setItem('token' , response.data.token)
+            localStorage.setItem('userType', 'admin')
+            window.location.href="/adminArtist"
+        
         })
         .catch((err)=>{
             console.log(err.response)
@@ -36,6 +34,7 @@ class Login extends Component{
                    <form>
                        <div className="form-icon">
                            <span><i className="icon icon-user"></i></span>
+                           <h4>Admin Login Here !!</h4>
                        </div>
                        <div className="form-group">
                        <p>Username : <input type="text" value={this.state.Username}
@@ -47,8 +46,7 @@ class Login extends Component{
                        </div>
                        <div className="form-group">
                        <p><input type="submit" onClick={this.sendUserData}/>
-                       <Link to ={"/artist"}></Link>
-                         </p>
+                       <Link to={"/adminArtist"}> </Link>  </p>
                        </div>
                    </form>
                    <div className="social-media">
@@ -65,4 +63,4 @@ class Login extends Component{
         )
     }
 }
-export default Login
+export default Adminlogin

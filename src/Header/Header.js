@@ -2,30 +2,71 @@ import React, { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
+import {Link} from 'react-router-dom';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
 class Header extends Component{
+  logout=()=>{
+    localStorage.removeItem('token')
+    localStorage.removeItem('id')
+    window.location.href ='/login'
+  }
     render (){
-        return(
-    
-            <div className="header">
-                
-    
-    
-    
-
-  <br />
-  <Navbar bg="primary" variant="dark">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="/">Home</Nav.Link>
+      if(localStorage.getItem('token')&& localStorage.getItem('userType')=='admin'){
+        var menu =
+        <>
+        <Nav.Link href="/adminArtist">Admin Artist</Nav.Link>
+        <Nav.Link href="/Artist">Home</Nav.Link>
       <Nav.Link href="/register">Register</Nav.Link>
       <Nav.Link href="/login">Login</Nav.Link>
+      <Nav.Link href="/profile">Add Profile</Nav.Link>
+      <Nav.Link href="/Myprofile">My Profile</Nav.Link>
+      <Nav.Link href="/Aboutus">About Us</Nav.Link>
+      <Nav.Link href='/' onClick={this.logout}>Log Out</Nav.Link>
+        </>
+      }
+      else if (localStorage.getItem('token')&& localStorage.getItem('userType')=='artist'){
+        var menu=
+        <>
+        <Nav.Link href="/Artist">Home</Nav.Link>
+      <Nav.Link href="/addArtist">Add Profile</Nav.Link>
+      <Nav.Link href="/Myprofile">My Profile</Nav.Link>
+      <Nav.Link href="/Aboutus">About Us</Nav.Link>
+      <Nav.Link href='/' onClick={this.logout}>Log Out</Nav.Link>
+        </>
+      }
+      else if(localStorage.getItem('token')&&localStorage.getItem('userType')=='user'){
+        var menu =
+        <>
+        <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href='/' onClick={this.logout}>Log Out</Nav.Link>
+        
+        </>
+      }
+      else {
+        var menu=
+        <>
+        <Nav.Link href="/register">Register</Nav.Link>
+        <Nav.Link href="/login">Login</Nav.Link>
+        <Nav.Link href="/aboutus">About Us</Nav.Link>
+       
+        </>
+      }
+      
+        return(
+   
+            <div className="header">
+  <br />
+  <Navbar bg="primary" variant="dark">
+    <Navbar.Brand href="/"><img style={{width:"80px", outerHeight:"80"}} src="logoapun.png"></img></Navbar.Brand>
+    <Nav className="mr-auto">
+      {menu}
+      {/* <Nav.Link href="/UpdateMyArtist">Update</Nav.Link> */}
     </Nav>
     <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-light">Search</Button>
+      {/* <Button variant="outline-light">Search</Button> */}
     </Form>
   </Navbar>
 
