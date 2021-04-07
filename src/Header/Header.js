@@ -65,7 +65,7 @@ class Header extends Component{
       {/* <Nav.Link href="/UpdateMyArtist">Update</Nav.Link> */}
     </Nav>
     <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <FormControl type="text" placeholder="Search" className="mr-sm-4" style={{width:"500px", Height:"80"}} />
       {/* <Button variant="outline-light">Search</Button> */}
     </Form>
   </Navbar>

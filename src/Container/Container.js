@@ -12,6 +12,7 @@ import Adminlogin from "../Admin/Admin_login";
 import Adminregister from "../Admin/Admin_Register";
 import addArtist from "./AddArtist";
 import AdminArtist from "../Admin/Adminartist";
+import View from "../Body/View";
 
 class Container extends Component{
     render(){
@@ -30,6 +31,8 @@ class Container extends Component{
      <Route path='/adminlogin' component={Adminlogin}/>
      <Route path='/adminregister' component={Adminregister}/>
      <Route path='/adminArtist' component={AdminArtist}/>
+     <Route path='/view' component={View}/>
+     
      
 </div>
         )

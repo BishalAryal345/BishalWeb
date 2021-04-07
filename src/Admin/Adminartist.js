@@ -66,7 +66,7 @@ deleteArtist=(aid)=>{
                            <p> <a className="btn btn-sm btn-dark p-2" href="/Aboutus">Learn More</a>
                             <a className="btn btn-outline-info " href="#">!! Hire Now !!</a>
                            </p>
-                            <p><button onClick={this.deleteArtist.bind(this, myartist._id)}>Delete</button> 
+                            <p><button className="btn btn-danger" onClick={this.deleteArtist.bind(this, myartist._id)}>Delete</button> 
                             <Link to={"/UpdateMyArtist/" + myartist._id}> Update </Link></p>
                         </div>
                         </div>

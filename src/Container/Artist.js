@@ -44,12 +44,12 @@ deleteArtist=(aid)=>{
                             <div className="card">
                                
                             <div className="card-body p-0 ">
-                            <img src={"http://localhost:90/" + myartist.Pimage} />
+                            <img class="card-img-top" src={"http://localhost:90/" + myartist.Pimage} />
                             <h4 className="card-title p-2">{myartist.Profession}</h4>
                             <h3 className="card-title p-2">{myartist.FullName}</h3>
-                            <h6 className="card-text p-3">
+                            <h5 className="card-title p-3">
                        {myartist.Description}
-                    </h6>
+                    </h5>
                     
                     <div className="text-center p-0">
                         {/* <p class="gold-star">
@@ -63,7 +63,7 @@ deleteArtist=(aid)=>{
                       
                   
                     
-                           <p> <a className="btn btn-sm btn-dark p-3" href="/Aboutus">Learn More</a>
+                           <p> <Link to={"/myprofile/" + myartist._id}> Learn More </Link>
                             <a className="btn btn-outline-info p-3" href="#">!! Hire Now !!</a>
                            </p>
                         </div>
