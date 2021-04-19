@@ -7,7 +7,7 @@ class Myprofile extends Component{
         profile: [] 
         }
         componentDidMount(){
-            axios.get("http://localhost:90/register/show")
+            axios.get("http://localhost:900/register/show")
        .then((response)=>{
            console.log(response.data)
             this.setState({
@@ -18,7 +18,7 @@ class Myprofile extends Component{
        .catch()     
     }
     deleteProfile=(aid)=>{
-        axios.delete("http://localhost:90/register/delete/" + aid, this.state.config )
+        axios.delete("http://localhost:900/register/delete/" + aid, this.state.config )
         .then((response)=>{
             console.log(response.data.message )
         })

@@ -17,22 +17,22 @@ class Header extends Component{
         var menu =
         <>
         <Nav.Link href="/adminArtist">Admin Artist</Nav.Link>
-        <Nav.Link href="/Artist">Home</Nav.Link>
+        <Nav.Link href="/artist">Home</Nav.Link>
       <Nav.Link href="/register">Register</Nav.Link>
       <Nav.Link href="/login">Login</Nav.Link>
-      <Nav.Link href="/profile">Add Profile</Nav.Link>
-      <Nav.Link href="/Myprofile">My Profile</Nav.Link>
-      <Nav.Link href="/Aboutus">About Us</Nav.Link>
+      <Nav.Link href="/addArtist">Add Profile</Nav.Link>
+      <Nav.Link href="/myprofile">My Profile</Nav.Link>
+      <Nav.Link href="/aboutus">About Us</Nav.Link>
       <Nav.Link href='/' onClick={this.logout}>Log Out</Nav.Link>
         </>
       }
       else if (localStorage.getItem('token')&& localStorage.getItem('userType')=='artist'){
         var menu=
         <>
-        <Nav.Link href="/Artist">Home</Nav.Link>
+        <Nav.Link href="/artist">Home</Nav.Link>
       <Nav.Link href="/addArtist">Add Profile</Nav.Link>
-      <Nav.Link href="/Myprofile">My Profile</Nav.Link>
-      <Nav.Link href="/Aboutus">About Us</Nav.Link>
+      <Nav.Link href="/myprofile">My Profile</Nav.Link>
+      <Nav.Link href="/aboutus">About Us</Nav.Link>
       <Nav.Link href='/' onClick={this.logout}>Log Out</Nav.Link>
         </>
       }

@@ -9,7 +9,7 @@ class Navi extends Component {
     logout=()=>{
         localStorage.removeItem('token')
         localStorage.removeItem('id')
-        window.location.href ='/login'
+        window.location.href ='/'
       }
     render() {
         if(localStorage.getItem('token')&& localStorage.getItem('userType')=='admin'){
@@ -28,7 +28,8 @@ class Navi extends Component {
           }
           else if (localStorage.getItem('token')&& localStorage.getItem('userType')=='artist'){
             var menu=
-            <>    <div class="main_nav_container ml-auto">
+            <> 
+               <div class="main_nav_container ml-auto">
             <ul class="main_nav_list">
                 <li class="main_nav_item"><a href="/artist">Home</a></li>
                 <li class="main_nav_item"><a href="/addartist">Add Profile</a></li>
@@ -77,7 +78,7 @@ class Navi extends Component {
                         <div class="container">
                             <div class="row">
                                 <div class="col d-flex flex-row">
-                                    <div class="phone">+45 345 3324 56789</div>
+                                    <div class="phone">+977 9863346414</div>
                                     <div class="social">
                                         <ul class="social_list">
                                             <li class="social_list_item"><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
@@ -104,7 +105,7 @@ class Navi extends Component {
                             <div class="row">
                                 <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
                                     <div class="logo_container">
-                                        <div class="logo"><a href="#"><img src="Images/logo.png" alt="" />travelix</a></div>
+                                        <div class="logo"><a href="#"><img src="Images/logo.png" alt="" />ArtistChaiyo</a></div>
                                     </div>
                                     <div class="main_nav_container ml-auto">
                                        

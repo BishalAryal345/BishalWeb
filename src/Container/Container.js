@@ -13,6 +13,9 @@ import Adminregister from "../Admin/Admin_Register";
 import addArtist from "./AddArtist";
 import AdminArtist from "../Admin/Adminartist";
 import View from "../Body/View";
+import bodyy from "../Body/Body";
+import Lgin from "../Body/LgIn";
+import Hire from "../Body/HIre";
 
 class Container extends Component{
     render(){
@@ -32,6 +35,9 @@ class Container extends Component{
      <Route path='/adminregister' component={Adminregister}/>
      <Route path='/adminArtist' component={AdminArtist}/>
      <Route path='/view' component={View}/>
+     <Route path='/body' component={bodyy}/>
+     <Route path='/lgin' component={Lgin}/>
+     <Route path='/hire' component={Hire}/>
      
      
 </div>

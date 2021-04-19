@@ -14,7 +14,7 @@ class Adminregister extends Component{
             Username :this.state.Username,
             Password :this.state.Password
         }
-        axios.post("http://localhost:90/admin/insert", data)
+        axios.post("http://localhost:900/admin/insert", data)
         .then()
         .catch(err=>{
             console.log(err)

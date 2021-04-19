@@ -10,7 +10,7 @@ class UpdateMyArtist extends Component{
     }
     componentDidMount(){
         console.log(this.state.id)
-        axios.get("http://localhost:90/artist/single/" + this.state.id)
+        axios.get("http://localhost:900/artist/single/" + this.state.id)
         
         .then((response)=>{
             console.log(response)
@@ -35,7 +35,7 @@ class UpdateMyArtist extends Component{
     updateArtist=(e)=>
 {
     e.preventDefault()
-    axios.put("http://localhost:90/artist/update", this.state)
+    axios.put("http://localhost:900/artist/update", this.state)
     .then((response)=>{
         console.log(response)
     })

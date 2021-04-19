@@ -36,7 +36,7 @@ class addArtist extends Component{
         data.append ('Profession', this.state.Profession)
         data.append ('Description', this.state.Description)
         data.append ('PriceRate', this.state.PriceRate)
-        axios.post("http://localhost:90/artist/insert", data)
+        axios.post("http://localhost:900/artist/insert", data)
         .then((response)=>{
          console.log(response)
          alert(response)

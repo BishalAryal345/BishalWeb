@@ -28,7 +28,7 @@ class register extends Component{
         data.append ('Username', this.state.Username)
         data.append ('Password', this.state.Password)
         
-        axios.post("http://localhost:90/register/insert", data)
+        axios.post("http://localhost:900/register/insert", data)
         .then()
         .catch(err=>{
             console.log(err)
