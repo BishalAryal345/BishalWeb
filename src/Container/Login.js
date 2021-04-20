@@ -2,12 +2,15 @@ import { Component } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './login.css';
-
+import '../styles/contact_styles.css'
+import '../styles/contact_responsive.css'
+import '../plugins/font-awesome-4.7.0/css/font-awesome.min.css'
 
 class Login extends Component {
     state = {
         Username: "",
         Password: ""
+
     }
     sendUserData = (e) => {
         e.preventDefault();
@@ -38,24 +41,26 @@ class Login extends Component {
                         <div class="col">
 
                             <div class="contact_form_container">
-                                <div class="contact_title text-center">User Login</div>
-                                <form>
+
+                                <h3 className="bg-light p-4" id="projectAnchor">!! Login Form !!</h3>
+                                <form >
                                     <div className="form-icon">
                                         <span><i className="icon icon-user"></i></span>
                                     </div>
                                     <div className="form-group">
-                                        <p>Username : <input type="text" value={this.state.Username}
-                                            onChange={(event) => { this.setState({ Username: event.target.value }) }} /></p>
+                                        <label>Username : <input type="text" value={this.state.Username}
+                                            onChange={(event) => { this.setState({ Username: event.target.value }) }} /></label>
                                     </div>
                                     <div className="form-group">
-                                        <p>Password : <input type="password" value={this.state.Password}
-                                            onChange={(event) => { this.setState({ Password: event.target.value }) }} /></p>
+                                        <label>Password : <input type="password" value={this.state.Password}
+                                            onChange={(event) => { this.setState({ Password: event.target.value }) }} /></label>
                                     </div>
                                     <div className="form-group">
-                                        <p><input type="submit" onClick={this.sendUserData} />
-                                            <Link to={"/artist"}></Link>
-                                        </p>
+                                        <h3><button onClick={this.sendUserData} href="/artist">
+                                            Login</button>
+                                        </h3>
                                     </div>
+                                    <h3>Do Not Have an Accout ?<Link to="/register">Signup</Link></h3>
                                 </form>
 
                             </div>

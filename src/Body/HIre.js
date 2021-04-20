@@ -11,9 +11,10 @@ class Hire extends Component {
             <div class="container">
                 <div class="row">
                     <div class="col">
-    
-                             <div class="contact_form_container">
-                            <div class="contact_title text-center">Sending Request To Artist</div>
+
+                        <div class="contact_form_container">
+
+                            <h3 className="bg-light p-4" id="projectAnchor">!! Sending Request To Artist !!</h3>
                             <form action="#" id="contact_form" class="contact_form text-center">
                                 <input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Name" required="required" data-error="Name is required."/>
                                 <input type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required."/>

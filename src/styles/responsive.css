@@ -25,7 +25,7 @@
 1. 1600px
 ************/
 
-@media only screen and (max-width: 1600px)
+@media only screen and (max-width: 100%)
 {
 	
 }
@@ -34,7 +34,7 @@
 2. 1440px
 ************/
 
-@media only screen and (max-width: 1440px)
+@media only screen and (max-width: 100%)
 {
 	
 }
@@ -43,7 +43,7 @@
 3. 1380px
 ************/
 
-@media only screen and (max-width: 1380px)
+@media only screen and (max-width: 100%)
 {
 	
 }
@@ -52,7 +52,7 @@
 3. 1280px
 ************/
 
-@media only screen and (max-width: 1280px)
+@media only screen and (max-width: 100%)
 {
 	.cta_slider_prev
 	{
@@ -81,7 +81,7 @@
 4. 1199px
 ************/
 
-@media only screen and (max-width: 1199px)
+@media only screen and (max-width: 100%)
 {
 	.main_nav_container
 	{
@@ -106,7 +106,7 @@
 4. 1100px
 ************/
 
-@media only screen and (max-width: 1100px)
+@media only screen and (max-width: 100%)
 {
 	
 }
@@ -115,7 +115,7 @@
 5. 1024px
 ************/
 
-@media only screen and (max-width: 1024px)
+@media only screen and (max-width: 100%)
 {
 	
 }
@@ -124,7 +124,7 @@
 6. 991px
 ************/
 
-@media only screen and (max-width: 991px)
+@media only screen and (max-width: 100%)
 {
 	.main_nav_container
 	{
@@ -266,7 +266,7 @@
 7. 959px
 ************/
 
-@media only screen and (max-width: 959px)
+@media only screen and (max-width: 100%)
 {
 	
 }
@@ -275,7 +275,7 @@
 8. 880px
 ************/
 
-@media only screen and (max-width: 880px)
+@media only screen and (max-width: 100%)
 {
 	
 }
@@ -284,7 +284,7 @@
 9. 768px
 ************/
 
-@media only screen and (max-width: 768px)
+@media only screen and (max-width: 100%)
 {
 	
 }
@@ -293,7 +293,7 @@
 10. 767px
 ************/
 
-@media only screen and (max-width: 767px)
+@media only screen and (max-width: 100%)
 {
 	.intro_item
 	{
@@ -309,7 +309,7 @@
 11. 575px
 ************/
 
-@media only screen and (max-width: 575px)
+@media only screen and (max-width: 100%)
 {
 	p{font-size: 13px;}
 	.top_bar
@@ -537,7 +537,7 @@
 11. 539px
 ************/
 
-@media only screen and (max-width: 539px)
+@media only screen and (max-width: 100%)
 {
 	
 }
@@ -546,7 +546,7 @@
 12. 480px
 ************/
 
-@media only screen and (max-width: 480px)
+@media only screen and (max-width: 100%)
 {
 	
 }
@@ -555,7 +555,7 @@
 13. 479px
 ************/
 
-@media only screen and (max-width: 479px)
+@media only screen and (max-width: 100%)
 {
 	h2{font-size: 24px;}
 	p{font-size: 13px;}
@@ -573,7 +573,7 @@
 14. 400px
 ************/
 
-@media only screen and (max-width: 400px)
+@media only screen and (max-width: 100%)
 {
 	
 }

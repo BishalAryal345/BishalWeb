@@ -16,6 +16,7 @@ import View from "../Body/View";
 import bodyy from "../Body/Body";
 import Lgin from "../Body/LgIn";
 import Hire from "../Body/HIre";
+import Updateprofile from "../Body/UpdateProfile";
 
 class Container extends Component{
     render(){
@@ -38,6 +39,7 @@ class Container extends Component{
      <Route path='/body' component={bodyy}/>
      <Route path='/lgin' component={Lgin}/>
      <Route path='/hire' component={Hire}/>
+     <Route path='/updateprofile' component={Updateprofile}/>
      
      
 </div>

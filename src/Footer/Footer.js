@@ -39,7 +39,7 @@ class Footer extends Component{
                                 
                                
                                 <div class="footer_blog_item clearfix">
-                                    <div class="footer_blog_image"><img src='./Images/footer_blog_1.jpg'/></div>
+                                    <div class="footer_blog_image"></div>
                                     <div class="footer_blog_content">
                                         <div class="footer_blog_title"><a href="blog.html">Your Hire</a></div>
                                         <div class="footer_blog_date">Nov 29, 2017</div>
@@ -48,7 +48,7 @@ class Footer extends Component{
                                 
                              
                                 <div class="footer_blog_item clearfix">
-                                    <div class="footer_blog_image"><img src="Images/footer_blog_1.jpg" /></div>
+                                    <div class="footer_blog_image"></div>
                                     <div class="footer_blog_content">
                                         <div class="footer_blog_title"><a href="blog.html">New Artist for you</a></div>
                                         <div class="footer_blog_date">Nov 29, 2017</div>
@@ -57,7 +57,7 @@ class Footer extends Component{
     
              
                                 <div class="footer_blog_item clearfix">
-                                    <div class="footer_blog_image"><img src="Images/footer_blog_1.jpg" /></div>
+                                    <div class="footer_blog_image"></div>
                                     <div class="footer_blog_content">
                                         <div class="footer_blog_title"><a href="blog.html">JAM UP with us this year</a></div>
                                         <div class="footer_blog_date">Nov 29, 2017</div>

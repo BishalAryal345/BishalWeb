@@ -15,7 +15,7 @@ class Navi extends Component {
         if(localStorage.getItem('token')&& localStorage.getItem('userType')=='admin'){
             var menu =
             <>
-           <div class="main_nav_container ml-auto">
+           <div class="main_nav_container ml-auto col d-flex flex-row">
 							<ul class="main_nav_list">
 								<li class="main_nav_item"><a href="/artist">Home</a></li>
 								<li class="main_nav_item"><a href="/aboutus">About Us</a></li>
@@ -29,7 +29,7 @@ class Navi extends Component {
           else if (localStorage.getItem('token')&& localStorage.getItem('userType')=='artist'){
             var menu=
             <> 
-               <div class="main_nav_container ml-auto">
+               <div class="main_nav_container ml-auto col d-flex flex-row">
             <ul class="main_nav_list">
                 <li class="main_nav_item"><a href="/artist">Home</a></li>
                 <li class="main_nav_item"><a href="/addartist">Add Profile</a></li>
@@ -43,7 +43,7 @@ class Navi extends Component {
           else if(localStorage.getItem('token')&&localStorage.getItem('userType')=='user'){
             var menu =
             <>
-                <div class="main_nav_container ml-auto">
+                <div class="main_nav_container ml-auto col d-flex flex-row">
 							<ul class="main_nav_list">
 								<li class="main_nav_item"><a href="/">Home</a></li>
 								<li class="main_nav_item"><a href="/" onClick={this.logout}>Log Out</a></li>
@@ -56,7 +56,7 @@ class Navi extends Component {
           else {
             var menu=
             <>
-                <div class="main_nav_container ml-auto">
+                <div class="main_nav_container ml-auto col d-flex flex-row">
 							<ul class="main_nav_list">
 								<li class="main_nav_item"><a href="/register">Register</a></li>
                                 <li class="main_nav_item"><a href="/">Login</a></li>
@@ -75,7 +75,7 @@ class Navi extends Component {
 
 
                     <div class="top_bar">
-                        <div class="container">
+                        <div class="container width-100%" >
                             <div class="row">
                                 <div class="col d-flex flex-row">
                                     <div class="phone">+977 9863346414</div>
@@ -89,7 +89,7 @@ class Navi extends Component {
                                             <li class="social_list_item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                         </ul>
                                     </div>
-                                    <div class="user_box ml-auto">
+                                    <div class="user_box ml-auto col d-flex flex-row">
                                         <div class="user_box_login user_box_link"><a href="#">login</a></div>
                                         <div class="user_box_register user_box_link"><a href="#">register</a></div>
                                     </div>
@@ -105,7 +105,9 @@ class Navi extends Component {
                             <div class="row">
                                 <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
                                     <div class="logo_container">
-                                        <div class="logo"><a href="#"><img src="Images/logo.png" alt="" />ArtistChaiyo</a></div>
+                                        <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
+                                            <h1>ArtistChaiyo</h1>
+                                        </div>
                                     </div>
                                     <div class="main_nav_container ml-auto">
                                        

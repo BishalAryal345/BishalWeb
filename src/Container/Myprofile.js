@@ -1,73 +1,90 @@
 import { Component } from "react";
 import axios from 'axios';
-import {Link} from 'react-router-dom';
-
-class Myprofile extends Component{
-    state ={
-        profile: [] 
+import { Route, Link } from 'react-router-dom';
+class Myprofile extends Component {
+    state = {
+        FullName: "",
+        Address: "",
+        PhoneNo: "",
+        Username: "",
+        Password: "",
+        id: this.props.match.params.id,
+        config: {
+            headers: { 'authorization': `Bearer ${localStorage.getItem('token')}` }
         }
-        componentDidMount(){
-            axios.get("http://localhost:900/register/show")
-       .then((response)=>{
-           console.log(response.data)
-            this.setState({
-                profile : response.data
+    }
+    componentDidMount() {
+        console.log(this.state.id)
+        axios.get("http://localhost:900/artist/single/" + this.state.id)
+
+            .then((response) => {
+                console.log(response)
+                this.setState({
+                    FullName: response.data.FullName,
+                    Address: response.data.Address,
+                    PhoneNo: response.data.PhoneNo,
+                    Username: response.data.Username,
+                    Password: response.data.Password,
+                })
+
+            })
+            .catch((err) => {
+
             })
 
-       })
-       .catch()     
-    }
-    deleteProfile=(aid)=>{
-        axios.delete("http://localhost:900/register/delete/" + aid, this.state.config )
-        .then((response)=>{
-            console.log(response.data.message )
-        })
-        .catch((err)=>{
-            console.log(err.response)
-        })
     }
 
+    render() {
+        return (
+            <div class="contact_form_section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
 
-    render(){
-        return(
-            <div className="container-fluid ">
-                
-     <h4 className="bg-light p-4" id="projectAnchor">!! Your Profile  !!</h4>
-            <div className="card-deck p-2">               
-       
-                {
-                    this.state.profile.map((myprofile)=>{
-                        return(
-                            // <p>{myartist.FullName}</p>
-                            
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img
-        src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  </div>
-                        
-                        )
-                    })
-                }
-                  </div>
-               
+                            <div class="contact_form_container">
+
+                                <h3 className="bg-light p-4" id="projectAnchor">!! My Profile !!</h3>
+                                <form>
+
+                                    <label>
+                                        User Name
+    <input type="text"
+                                            value={this.state.FullName}
+                                            name="FullName" />
+                                    </label>
+                                    <label>
+                                        Address
+    <input type="text"
+                                            value={this.state.Address}
+                                            name="Address" />
+                                    </label>
+                                    <label>
+                                        Phone Number
+    <input type="text"
+                                            value={this.state.PhoneNo}
+                                            name="PhoneNo" />
+                                    </label>
+                                    <label>
+                                        Username
+    <input type="text"
+                                            value={this.state.Username}
+                                            name="Username" />
+                                    </label>
+                                    <label>
+                                        Password
+    <input type="text"
+                                            value={this.state.Password}
+                                            name="Password" />
+                                    </label>
+                                    <button type="submit" onClick={this.updateArtist}>Update</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
+
         )
     }
 }

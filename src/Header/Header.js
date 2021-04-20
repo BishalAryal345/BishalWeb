@@ -59,7 +59,7 @@ class Header extends Component{
             <div className="header">
   <br />
   <Navbar bg="primary" variant="dark">
-    <Navbar.Brand href="/"><img style={{width:"80px", outerHeight:"80"}} src="logoapun.png"></img></Navbar.Brand>
+    <Navbar.Brand href="/aboutus"><img style={{width:"80px", outerHeight:"80"}} src="logoapun.png"></img></Navbar.Brand>
     <Nav className="mr-auto">
       {menu}
       {/* <Nav.Link href="/UpdateMyArtist">Update</Nav.Link> */}
