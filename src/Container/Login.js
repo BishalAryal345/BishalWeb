@@ -44,9 +44,7 @@ class Login extends Component {
 
                                 <h3 className="bg-light p-4" id="projectAnchor">!! Login Form !!</h3>
                                 <form >
-                                    <div className="form-icon">
-                                        <span><i className="icon icon-user"></i></span>
-                                    </div>
+                            
                                     <div className="form-group">
                                         <label>Username : <input type="text" value={this.state.Username}
                                             onChange={(event) => { this.setState({ Username: event.target.value }) }} /></label>

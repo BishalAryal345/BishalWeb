@@ -6,67 +6,67 @@ import '../plugins/OwlCarousel2-2.2.1/owl.carousel.css';
 import '../plugins/OwlCarousel2-2.2.1/animate.css';
 import '../plugins/OwlCarousel2-2.2.1/owl.theme.default.css';
 class Navi extends Component {
-    logout=()=>{
+    logout = () => {
         localStorage.removeItem('token')
         localStorage.removeItem('id')
-        window.location.href ='/'
-      }
+        window.location.href = '/'
+    }
     render() {
-        if(localStorage.getItem('token')&& localStorage.getItem('userType')=='admin'){
+        if (localStorage.getItem('token') && localStorage.getItem('userType') == 'admin') {
             var menu =
-            <>
-           <div class="main_nav_container ml-auto col d-flex flex-row">
-							<ul class="main_nav_list">
-								<li class="main_nav_item"><a href="/artist">Home</a></li>
-								<li class="main_nav_item"><a href="/aboutus">About Us</a></li>
-								<li class="main_nav_item"><a href="/adminartist">Update Artist</a></li>
-								<li class="main_nav_item"><a href="/myprofile">Update profile</a></li>
-								<li class="main_nav_item"><a href="/" onClick={this.logout}>Log Out</a></li>
-							</ul>
-						</div>
-            </>
-          }
-          else if (localStorage.getItem('token')&& localStorage.getItem('userType')=='artist'){
-            var menu=
-            <> 
-               <div class="main_nav_container ml-auto col d-flex flex-row">
-            <ul class="main_nav_list">
-                <li class="main_nav_item"><a href="/artist">Home</a></li>
-                <li class="main_nav_item"><a href="/addartist">Add Profile</a></li>
-                <li class="main_nav_item"><a href="/myprofile">My Profile</a></li>
-                <li class="main_nav_item"><a href="/aboutus">About Us</a></li>
-                <li class="main_nav_item"><a href="/" onClick={this.logout}>Log Out</a></li>
-            </ul>
-        </div>
-            </>
-          }
-          else if(localStorage.getItem('token')&&localStorage.getItem('userType')=='user'){
+                <>
+                    <div class="main_nav_container ml-auto col d-flex flex-row">
+                        <ul class="main_nav_list">
+                            <li class="main_nav_item"><a href="/adminartist">Admin Artist</a></li>
+                            <li class="main_nav_item"><a href="/addartist">Add Profile</a></li>
+                            <li class="main_nav_item"><a href="/register">Register</a></li>
+                            <li class="main_nav_item"><a href="/myprofile">Profile</a></li>
+                            <li class="main_nav_item"><a href="/" onClick={this.logout}>Log Out</a></li>
+                        </ul>
+                    </div>
+                </>
+        }
+        else if (localStorage.getItem('token') && localStorage.getItem('userType') == 'artist') {
             var menu =
-            <>
-                <div class="main_nav_container ml-auto col d-flex flex-row">
-							<ul class="main_nav_list">
-								<li class="main_nav_item"><a href="/">Home</a></li>
-								<li class="main_nav_item"><a href="/" onClick={this.logout}>Log Out</a></li>
-							</ul>
-						</div>
-            
-            
-            </>
-          }
-          else {
-            var menu=
-            <>
-                <div class="main_nav_container ml-auto col d-flex flex-row">
-							<ul class="main_nav_list">
-								<li class="main_nav_item"><a href="/register">Register</a></li>
-                                <li class="main_nav_item"><a href="/">Login</a></li>
-								<li class="main_nav_item"><a href="/aboutus">About Us</a></li>				
-								
-							</ul>
-						</div>
-                       
-            </>
-          }
+                <>
+                    <div class="main_nav_container ml-auto col d-flex flex-row">
+                        <ul class="main_nav_list">
+                            <li class="main_nav_item"><a href="/artist">Home</a></li>
+                            <li class="main_nav_item"><a href="/addartist">Add Profile</a></li>
+                            <li class="main_nav_item"><a href="/myprofile">My Profile</a></li>
+                            <li class="main_nav_item"><a href="/aboutus">About Us</a></li>
+                            <li class="main_nav_item"><a href="/" onClick={this.logout}>Log Out</a></li>
+                        </ul>
+                    </div>
+                </>
+        }
+        else if (localStorage.getItem('token') && localStorage.getItem('userType') == 'user') {
+            var menu =
+                <>
+                    <div class="main_nav_container ml-auto col d-flex flex-row">
+                        <ul class="main_nav_list">
+                            <li class="main_nav_item"><a href="/">Home</a></li>
+                            <li class="main_nav_item"><a href="/" onClick={this.logout}>Log Out</a></li>
+                        </ul>
+                    </div>
+
+
+                </>
+        }
+        else {
+            var menu =
+                <>
+                    <div class="main_nav_container ml-auto col d-flex flex-row">
+                        <ul class="main_nav_list">
+                            <li class="main_nav_item"><a href="/register">Register</a></li>
+                            <li class="main_nav_item"><a href="/">Login</a></li>
+                            <li class="main_nav_item"><a href="/aboutus">About Us</a></li>
+
+                        </ul>
+                    </div>
+
+                </>
+        }
         return (
             <div class="super_container">
 
@@ -110,9 +110,9 @@ class Navi extends Component {
                                         </div>
                                     </div>
                                     <div class="main_nav_container ml-auto">
-                                       
-                                            {menu}
-                                        
+
+                                        {menu}
+
                                     </div>
                                     <div class="content_search ml-lg-0 ml-auto">
                                         <svg version="1.1" id="Layer_1" x="0px" y="0px"
@@ -149,18 +149,18 @@ class Navi extends Component {
                             </div>
                         </div>
                     </nav>
-                    </header>
+                </header>
 
 
-                    <div class="menu trans_500">
-                        <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
-                            <div class="menu_close_container"><div class="menu_close"></div></div>
-                            <div class="logo menu_logo"><a href="#"><img src="./Images/logo.png" alt="" /></a></div>
-                            
-                            {menu}
-                            
-                        </div>
+                <div class="menu trans_500">
+                    <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="menu_close_container"><div class="menu_close"></div></div>
+                        <div class="logo menu_logo"><a href="#"><img src="./Images/logo.png" alt="" /></a></div>
+
+                        {menu}
+
                     </div>
+                </div>
             </div>
 
         )
